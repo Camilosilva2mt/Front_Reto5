@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <tittle>Camilo Andres Silva - G10</tittle>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/misFunciones.js"></script>
+
+</head>
+<body>
+    <h1> Reto 3 </h1>
+    <h2> Categorias </h2>
+    <div id="resultadocat"></div>
+	<button onclick="traerInformacioncategorias()"> Consultar </button>
+
+	<div>
+		<input type="text" id="cname" placeholder="name">
+		<input type="text" id="cdescription" placeholder="descripción">
+	</div>
+    <button onclick="guardarInformacioncategorias()"> Agregar Categoria </button>
+
+    <h2> Cuatrimotos </h2>
+	<div id="resultadocuatri"></div>
+	<button onclick="traerInformacioncuatrimotos()"> Consultar </button>
+
+	<div>
+        <input type="text" id="namect" placeholder="name">
+		<input type="text" id="brandct" placeholder="brand">
+		<input type="number" id="yearct" placeholder="year">
+		<input type="text" id="descriptionct" placeholder="descripción">
+	</div>
+
+	<button onclick="guardarInformacioncuatrimotos()"> Agregar Cuatrimoto </button>
+
+    <h2> Clientes </h2>
+	<div id="resultadocliente"></div>
+	<button onclick="traerInformacioncliente()"> Consultar </button>
+
+	<div>
+		<input type="email" id="emailcl" placeholder="email">
+        <input type="text" id="passwordcl" placeholder="id">
+        <input type="text" id="namecl" placeholder="name">
+		<input type="number" id="agecl" placeholder="age">
+	</div>
+
+	<button onclick="guardarInformacioncliente()"> Agregar Cliente </button>
+
+    <h2> Mensajes </h2>
+	<div id="resultadomensaje"></div>
+	<button onclick="traerInformacionmensaje()"> Consultar </button>
+
+	<div>
+		<input type="text" id="messagetextc" placeholder="message">
+	</div>
+
+	<button onclick="guardarInformacionmensaje()"> Agregar Mensaje </button>
+
+    <h2> Reservación </h2>
+	<div id="resultadoreserva"></div>
+	<button onclick="traerInformacionreserva()"> Consultar </button>
+
+	<div>
+		<input type="date" id="startDate" placeholder="Start Date">
+        <input type="date" id="devolutionDate" placeholder="Devolution Date">
+	</div>
+
+	<button onclick="guardarInformacionreserva()"> Agregar Reservación </button>
+</body>
+</html>
