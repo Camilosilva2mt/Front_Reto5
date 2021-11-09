@@ -2,7 +2,7 @@
 //Función para traer información ingresada en categorias
 function traerInformacioncategorias() {
   $.ajax({
-    url: "http://localhost:8080/api/Category/all",
+    url: "http://168.138.130.33:8080/api/Category/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuestacat) {
@@ -45,7 +45,7 @@ function guardarInformacioncategorias() {
       contentType: "application/json; charset=utf-8",
       dataType: "JSON",
       data: JSON.stringify(varc),
-      url: "http://localhost:8080/api/Category/save",
+      url: "http://168.138.130.33:8080/api/Category/save",
 
       success: function (response) {
         console.log(response);
@@ -72,7 +72,7 @@ function editarInformacioncategorias(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://localhost:8080/api/Category/update",
+    url: "http://168.138.130.33:8080/api/Category/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -93,7 +93,7 @@ function eliminarInformacioncat(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://localhost:8080/api/Category/" + idElemento,
+    url: "http://168.138.130.33:8080/api/Category/" + idElemento,
     type: "DELETE",
     contentType: "application/JSON",
     datatype: "JSON",
@@ -110,7 +110,7 @@ function eliminarInformacioncat(idElemento) {
 //Función para traer información ingresada en cuatrimotos
 function traerInformacioncuatrimotos() {
   $.ajax({
-    url: "http://localhost:8080/api/Quadbike/all",
+    url: "http://168.138.130.33:8080/api/Quadbike/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuestacuatri) {
@@ -164,7 +164,7 @@ function guardarInformacioncuatrimotos() {
       dataType: "JSON",
       data: JSON.stringify(varct),
 
-      url: "http://localhost:8080/api/Quadbike/save",
+      url: "http://168.138.130.33:8080/api/Quadbike/save",
 
       success: function (response) {
         console.log(response);
@@ -193,7 +193,7 @@ function editarInformacioncuatrimotos(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://localhost:8080/api/Quadbike/update",
+    url: "http://168.138.130.33:8080/api/Quadbike/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -216,7 +216,7 @@ function eliminarInformacioncuatrimotos(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://localhost:8080/api/Quadbike/" + idElemento,
+    url: "http://168.138.130.33:8080/api/Quadbike/" + idElemento,
     type: "DELETE",
     contentType: "application/JSON",
     datatype: "JSON",
@@ -232,7 +232,7 @@ function eliminarInformacioncuatrimotos(idElemento) {
 //Función para traer información ingresada en clientes
 function traerInformacioncliente() {
   $.ajax({
-    url: "http://localhost:8080/api/Client/all",
+    url: "http://168.138.130.33:8080/api/Client/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuestacliente) {
@@ -285,7 +285,7 @@ function guardarInformacioncliente() {
       contentType: "application/json; charset=utf-8",
       dataType: "JSON",
       data: JSON.stringify(var4),
-      url: "http://localhost:8080/api/Client/save",
+      url: "http://168.138.130.33:8080/api/Client/save",
 
       success: function () {
         console.log(response);
@@ -314,7 +314,7 @@ function editarInformacioncliente(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://localhost:8080/api/Client/update",
+    url: "http://168.138.130.33:8080/api/Client/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -341,7 +341,7 @@ function eliminarInformacioncliente(idElemento) {
     contentType: "application/json; charset=utf-8",
     datatype: "JSON",
     data: JSON.stringify(myData),
-    url: "http://localhost:8080/api/Client/" + idElemento,
+    url: "http://168.138.130.33:8080/api/Client/" + idElemento,
     success: function (response) {
       $("#resultadocliente").empty();
       traerInformacioncliente();
@@ -353,7 +353,7 @@ function eliminarInformacioncliente(idElemento) {
 //Función para traer información ingresada en mensajes
 function traerInformacionmensaje() {
   $.ajax({
-    url: "http://localhost:8080/api/Message/all",
+    url: "http://168.138.130.33:8080/api/Message/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuestamensaje) {
@@ -396,7 +396,7 @@ function guardarInformacionmensaje() {
       dataType: "JSON",
       data: JSON.stringify(var5),
 
-      url: "http://localhost:8080/api/Message/save",
+      url: "http://168.138.130.33:8080/api/Message/save",
 
       success: function (response) {
         console.log(response);
@@ -422,7 +422,7 @@ function editarInformacionmensaje(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://localhost:8080/api/Message/update",
+    url: "http://168.138.130.33:8080/api/Message/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -442,7 +442,7 @@ function eliminarInformacionmensaje(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://localhost:8080/api/Message/" + idElemento,
+    url: "http://168.138.130.33:8080/api/Message/" + idElemento,
     type: "DELETE",
     contentType: "application/JSON",
     datatype: "JSON",
@@ -458,7 +458,7 @@ function eliminarInformacionmensaje(idElemento) {
 //Función para traer información ingresada en reservas
 function traerInformacionreserva() {
   $.ajax({
-    url: "http://localhost:8080/api/Reservation/all",
+    url: "http://168.138.130.33:8080/api/Reservation/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuestareserva) {
@@ -507,7 +507,7 @@ function guardarInformacionreserva() {
       dataType: "JSON",
       data: JSON.stringify(var6),
 
-      url: "http://localhost:8080/api/Reservation/save",
+      url: "http://168.138.130.33:8080/api/Reservation/save",
 
       success: function (response) {
         console.log(response);
@@ -534,7 +534,7 @@ function editarInformacionreserva(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://localhost:8080/api/Reservation/update",
+    url: "http://168.138.130.33:8080/api/Reservation/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -555,7 +555,7 @@ function eliminarInformacionreserva(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://localhost:8080/api/Reservation/" + idElemento,
+    url: "http://168.138.130.33:8080/api/Reservation/" + idElemento,
     type: "DELETE",
     contentType: "application/JSON",
     datatype: "JSON",
