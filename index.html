@@ -1,69 +1,153 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <!--Cabecera de la pagina principal-->
+  <head>
+    <meta charset="utf-8" />
     <tittle>Camilo Andres Silva - G10</tittle>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/misFunciones.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+  </head>
+  <body>
+    <!--Titulo de la parte superior de la pagina del usuario-->
+    <h1>Reto 3_4</h1>
 
-</head>
-<body>
-    <h1> Reto 3 </h1>
-    <h2> Categorias </h2>
+    <!--Formulario para la clase categorias con validaciones-->
+    <h2>Categorias</h2>
     <div id="resultadocat"></div>
-	<button onclick="traerInformacioncategorias()"> Consultar </button>
+    <button onclick="traerInformacioncategorias()">Consultar</button>
+    <form onsubmit="guardarInformacioncategorias()">
+      <div>
+        <input
+          type="text"
+          id="cname"
+          placeholder="nombre"
+          minlength="2"
+          maxlength="50"
+        />
+        <input
+          type="text"
+          id="cdescription"
+          placeholder="descripción"
+          minlength="2"
+          maxlength="100"
+        />
+      </div>
+      <input type="submit" value="Agregar Categoria" />
+    </form>
+    <!--Fin formulario categorias-->
 
-	<div>
-		<input type="text" id="cname" placeholder="name">
-		<input type="text" id="cdescription" placeholder="descripción">
-	</div>
-    <button onclick="guardarInformacioncategorias()"> Agregar Categoria </button>
+    <!--Formulario para la clase cuatrimotos con validaciones-->
+    <h2>Cuatrimotos</h2>
+    <div id="resultadocuatri"></div>
+    <button onclick="traerInformacioncuatrimotos()">Consultar</button>
+    <form onsubmit="guardarInformacioncuatrimotos()">
+      <div>
+        <input
+          type="text"
+          id="namect"
+          placeholder="nombre"
+          minlength="2"
+          maxlength="50"
+        />
+        <input
+          type="text"
+          id="brandct"
+          placeholder="marca"
+          minlength="2"
+          maxlength="20"
+        />
+        <input
+          type="number"
+          id="yearct"
+          placeholder="año"
+          min="200"
+          max="5000"
+          title="Debe ingresar números"
+        />
+        <input
+          type="text"
+          id="descriptionct"
+          placeholder="descripción"
+          minlength="2"
+          maxlength="100"
+        />
+      </div>
 
-    <h2> Cuatrimotos </h2>
-	<div id="resultadocuatri"></div>
-	<button onclick="traerInformacioncuatrimotos()"> Consultar </button>
+      <input type="submit" value="Agregar Cuatrimoto" />
+    </form>
+    <!--Fin formulario cuatrimotos-->
 
-	<div>
-        <input type="text" id="namect" placeholder="name">
-		<input type="text" id="brandct" placeholder="brand">
-		<input type="number" id="yearct" placeholder="year">
-		<input type="text" id="descriptionct" placeholder="descripción">
-	</div>
+    <!--Formulario para la clase clientes con validaciones-->
+    <h2>Clientes</h2>
+    <div id="resultadocliente"></div>
+    <button onclick="traerInformacioncliente()">Consultar</button>
+    <form onsubmit="guardarInformacioncliente()">
+      <div>
+        <input
+          type="email"
+          id="emailcl"
+          placeholder="email"
+          minlength="5"
+          maxlength="30"
+        />
+        <input
+          type="password"
+          id="passwordcl"
+          placeholder="clave"
+          minlength="1"
+          maxlength="20"
+        />
+        <input
+          type="text"
+          id="namecl"
+          placeholder="nombre"
+          minlength="2"
+          maxlength="50"
+        />
+        <input
+          type="number"
+          id="agecl"
+          placeholder="edad"
+          min="1"
+          max="120"
+          title="Debe ingresar números"
+        />
+      </div>
+      <input type="submit" value="Agregar Cliente" />
+    </form>
+    <!--Fin formulario clientes-->
 
-	<button onclick="guardarInformacioncuatrimotos()"> Agregar Cuatrimoto </button>
+    <!--Formulario para la clase mensajes con validaciones-->
+    <h2>Mensajes</h2>
+    <div id="resultadomensaje"></div>
+    <button onclick="traerInformacionmensaje()">Consultar</button>
+    <form onsubmit="guardarInformacionmensaje()">
+      <div>
+        <input
+          type="text"
+          id="messagetextc"
+          placeholder="message"
+          minlength="5"
+          maxlength="500"
+        />
+      </div>
+      <input type="submit" value="Agregar Mensaje" />
+    </form>
+    <!--Fin formulario mensajes-->
 
-    <h2> Clientes </h2>
-	<div id="resultadocliente"></div>
-	<button onclick="traerInformacioncliente()"> Consultar </button>
-
-	<div>
-		<input type="email" id="emailcl" placeholder="email">
-        <input type="text" id="passwordcl" placeholder="id">
-        <input type="text" id="namecl" placeholder="name">
-		<input type="number" id="agecl" placeholder="age">
-	</div>
-
-	<button onclick="guardarInformacioncliente()"> Agregar Cliente </button>
-
-    <h2> Mensajes </h2>
-	<div id="resultadomensaje"></div>
-	<button onclick="traerInformacionmensaje()"> Consultar </button>
-
-	<div>
-		<input type="text" id="messagetextc" placeholder="message">
-	</div>
-
-	<button onclick="guardarInformacionmensaje()"> Agregar Mensaje </button>
-
-    <h2> Reservación </h2>
-	<div id="resultadoreserva"></div>
-	<button onclick="traerInformacionreserva()"> Consultar </button>
-
-	<div>
-		<input type="date" id="startDate" placeholder="Start Date">
-        <input type="date" id="devolutionDate" placeholder="Devolution Date">
-	</div>
-
-	<button onclick="guardarInformacionreserva()"> Agregar Reservación </button>
-</body>
+    <!--Formulario para la clase reservas con validaciones-->
+    <h2>Reservación</h2>
+    <div id="resultadoreserva"></div>
+    <button onclick="traerInformacionreserva()">Consultar</button>
+    <form onsubmit="guardarInformacionreserva()">
+      <div>
+        <input type="date" id="startDate" placeholder="Start Date" />
+        <input type="date" id="devolutionDate" placeholder="Devolution Date" />
+      </div>
+      <input type="submit" value="Agregar Reservación" />
+    </form>
+    <!--Fin formulario reservas-->
+  </body>
+  <!--Fin body-->
 </html>
+<!--Fin html-->
