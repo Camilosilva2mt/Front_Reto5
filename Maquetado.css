@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor{
+    width: 1340px;
+    height: 1000px;
+    margin: 0.5em auto;
+    padding: 0.5em;    
+}
+
+#cabecera{
+    width: 85%;
+    height: 17%;
+    margin: 0em;  
+}
+
+#header{
+    width: 70%; 
+    height:40%;    
+    margin: 0.9em;
+    float: right;
+    padding: 0.8%;           
+}        
+
+#contenido{
+    height: 48%;
+    margin: 0.5em;                
+}
+
+body {
+    font-family: "Century Gothic";
+    font-weight: bold;
+    color: White;
+}
+
+h1 {
+    color: black;
+    font-family: Century Gothic;
+}
+
+h2 {
+    color: white;
+    font-family: Century Gothic;
+}
+
+.quadrent-box{
+    width: 1000px;
+    height: 1900px;
+    background: rgba(8,54,138,0.7);
+    top: 0.1%;
+    left: 70%;
+    position: relative;
+    top:1000px;
+    left:700px;
+    transform: translate(-50%,-53%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.quadrent-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.quadrent-box input{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin-bottom:20px;
+}
+::placeholder{
+    color: rgba(137,146,157,0.8);
+}
+.quadrent-box input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #FFF;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.quadrent-box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #DF8153/*#1c8adb*/;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.quadrent-box a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+.entry {
+    text-align: justify;
+    width: 620px;
+    margin: 0px;
+    padding: 40px 30px 0px 30px;
+
+}

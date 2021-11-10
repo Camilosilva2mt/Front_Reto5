@@ -567,3 +567,95 @@ function eliminarInformacionreserva(idElemento) {
     },
   });
 }
+//Visualización de reportes
+//Funcion para traer el estado de los reportes
+function traerReporteStatus() {
+  console.log("test");
+  $.ajax({
+    url: "http://168.138.130.33:8080/api/Reservation/report-status",
+    type: "GET",
+    datatype: "JSON",
+    success: function (respuesta) {
+      console.log(respuesta);
+      pintarRespuesta(respuesta);
+    },
+  });
+}
+//Funcion para pintar la respuesta del estado de los reportes
+function pintarRespuesta(respuesta) {
+  let myTable = "<table>";
+  myTable += "<tr>";
+  myTable += "<th>completadas</th>";
+  myTable += "<td>" + respuesta.completed + "</td>";
+  myTable += "<th>canceladas</th>";
+  myTable += "<td>" + respuesta.cancelled + "</td>";
+  myTable += "</tr>";
+  myTable += "</table>";
+  $("#resultadoStatus").html(myTable);
+}
+//Funcion para tomar los datos del reporte por fechas
+function traerReporteDate() {
+  var fechaInicio = document.getElementById("RstarDate").value;
+  var fechaCierre = document.getElementById("RdevolutionDate").value;
+  console.log(fechaInicio);
+  console.log(fechaCierre);
+
+  $.ajax({
+    url:
+      "http://168.138.130.33:8080/api/Reservation/report-dates/" +
+      fechaInicio +
+      "/" +
+      fechaCierre,
+    type: "GET",
+    datatype: "JSON",
+    success: function (respuesta) {
+      console.log(respuesta);
+      pintarRespuestaDate(respuesta);
+    },
+  });
+}
+//Funcion para pintar la respuesta del reporte por fechas
+function pintarRespuestaDate(respuesta) {
+  let myTable = "<table>";
+  myTable += "<tr>";
+
+  for (i = 0; i < respuesta.length; i++) {
+    myTable += "<th>total</th>";
+    myTable += "<td>" + cnvFecha(respuesta[i].devolutionDate) + "</td>";
+    myTable += "<td>" + cnvFecha(respuesta[i].startDate) + "</td>";
+    myTable += "<td>" + respuesta[i].status + "</td>";
+
+    myTable += "</tr>";
+  }
+  myTable += "</table>";
+  $("#resultadoDate").html(myTable);
+}
+//Funcion para traer los datos de los cliente en el reporte
+function traerReporteClientes() {
+  $.ajax({
+    url: "http://168.138.130.33:8080/api/Reservation/report-clients",
+    type: "GET",
+    datatype: "JSON",
+    success: function (respuesta) {
+      console.log(respuesta);
+      pintarRespuestaClientes(respuesta);
+    },
+  });
+}
+//Funcion para pintar la respuesta del reporte de los clientes
+function pintarRespuestaClientes(respuesta) {
+  let myTable = "<table>";
+  myTable += "<tr>";
+
+  for (i = 0; i < respuesta.length; i++) {
+    myTable += "<th>total</th>";
+    myTable += "<td>" + respuesta[i].total + "</td>";
+    myTable += "<td>" + respuesta[i].client.name + "</td>";
+    myTable += "<td>" + respuesta[i].client.email + "</td>";
+    myTable += "<td>" + respuesta[i].client.age + "</td>";
+
+    myTable += "</tr>";
+  }
+  myTable += "</table>";
+  $("#resultadoClientes").html(myTable);
+}

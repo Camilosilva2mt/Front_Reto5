@@ -6,11 +6,16 @@
     <tittle>Camilo Andres Silva - G10</tittle>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/misFunciones.js"></script>
+    <link rel="stylesheet" type="text/css" href="Maquetado.css">
   </head>
   <body>
     <!--Titulo de la parte superior de la pagina del usuario-->
-    <h1>Reto 3_4</h1>
-
+    <div id="contenedor">
+      <div id="cabecera"> 
+      <div id="header"> <h1><center><FONT SIZE=7>Quadbikes - Reto 5</h1></center></FONT></div>
+    </div>
+        <div class="quadrent-box">
+    <center>   
     <!--Formulario para la clase categorias con validaciones-->
     <h2>Categorias</h2>
     <div id="resultadocat"></div>
@@ -146,7 +151,28 @@
       </div>
       <input type="submit" value="Agregar Reservación" />
     </form>
-    <!--Fin formulario reservas-->
+
+    <!--Reportes-->
+    <h2>Reportes</h2>
+
+    <button onclick="traerReporteStatus()">
+      Generar Reporte Status Reservas
+    </button>
+    <div id="resultadoStatus"></div>
+
+    <input type="date" id="RstarDate" placeholder="descripcion" />
+    <input type="date" id="RdevolutionDate" placeholder="descripcion" />
+    <button onclick="traerReporteDate()">Generar Reporte por fecha</button>
+    <div id="resultadoDate"></div>
+
+    <button onclick="traerReporteClientes()">
+      Generar Reporte Clientes y Cantidad de reservas por cliente
+    </button>
+    <div id="resultadoClientes"></div>
+    <!--Fin reportes-->
+    </center>
+  </div>
+</div>
   </body>
   <!--Fin body-->
 </html>
